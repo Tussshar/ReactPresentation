@@ -20,12 +20,15 @@ var Route = require('react-router').Route;
 Similar thing we would have to do for other variables as well
 */
 
-
+var actions = require('actions');
+var store = require('configureStore').configure();
+import Presentation from 'Presentation';
 
 
 //App css
 require('style!css!sass!applicationStyles')
 
+store.dispatch(actions.changeDirection('Right', true));
 
 $(document).foundation();
 
@@ -40,6 +43,12 @@ ReactDOM.render(
     So now TodoApp component as well as all of its children will have access
     to data on store as well as dispaych action
   */
-  <p>React Redux Boiler plate</p>,
+  <Provider store={store}>
+    <Router history={hashHistory}>
+      <Route path="/">
+        <IndexRoute component={Presentation}/>
+      </Route>
+    </Router>
+  </Provider>,
   document.getElementById('app')
 );
