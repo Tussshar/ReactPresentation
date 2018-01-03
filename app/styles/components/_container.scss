@@ -1,0 +1,83 @@
+.container {
+  margin: 5px;
+  height: 100% !important;
+  text-align: center;
+}
+
+.heading {
+  margin-top: 15%;
+
+  font-size: 2em;
+  font-family: arial, helvetica, sans-serif;
+  padding: 10px;
+}
+
+.points {
+
+}
+
+.points p {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  font-weight: 450;
+  margin-bottom: 0.5rem !important;
+}
+
+.directions {
+  float: right;
+}
+
+.arrow {
+  position: relative;
+  list-style-type: none;
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  border-right: 0.3em solid green;
+  border-top: 0.3em solid green;
+  transform: rotate(-45deg);
+  margin-right: 0.5em;
+  margin-top: 0.1rem;
+}
+
+.arrow:hover {
+  width: 1.3em;
+}
+
+.directions .left {
+  display: inline-block;
+  transform: rotate(-135deg);
+  margin-right: 1.5rem;
+}
+
+.directions .right {
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.directions .down {
+  transform: rotate(135deg);
+  margin-left: 1.5rem;
+}
+
+.directions .top {
+  margin-left: 1.5rem;
+}
+
+.directions .down:hover {
+  margin-left: 1.6rem;
+}
+
+.directions .top:hover {
+  margin-left: 1.6rem;
+}
+
+body {
+  background: $light-grey;
+}
+
+#app .row .column {
+  height: 100%;
+
+}

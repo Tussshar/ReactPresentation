@@ -4,8 +4,11 @@ var {connect} = require('react-redux');
 export var Points = React.createClass({
   render: function () {
     return (
-      <div>
-        Points Component
+      <div className="points">
+        <p>Points Component</p>
+        <p>Points Component</p>
+        <p>Points Component</p>
+        <p>Points Component</p>
       </div>
     );
   }

@@ -9,7 +9,7 @@ export var Presentation = React.createClass({
   render(){
     return (
       <div className="row">
-        <div className="column small-centered small-11 medium-6 large-5">
+        <div className="column small-centered small-11 medium-10 large-10">
           <div className="container">
             <Title/>
             <Points/>
