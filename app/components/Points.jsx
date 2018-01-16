@@ -3,15 +3,34 @@ var {connect} = require('react-redux');
 
 export var Points = React.createClass({
   render: function () {
+
+    var renderPoints = () => {
+      var {currentPage} = this.props;
+      let buffer = [];
+
+      if(currentPage !== undefined) {
+        currentPage.points.map(function(data){
+          buffer.push(<p>{data}</p>);
+        });
+      }
+
+      return (
+        <div className="points">
+          {buffer}
+        </div>
+      );
+    };
+
     return (
-      <div className="points">
-        <p>Points Component</p>
-        <p>Points Component</p>
-        <p>Points Component</p>
-        <p>Points Component</p>
-      </div>
+      renderPoints()
     );
   }
 });
 
-export default connect()(Points);
+export default connect(
+  (state) => {
+    return {
+      currentPage: state.currentPage
+    }
+  }
+)(Points);

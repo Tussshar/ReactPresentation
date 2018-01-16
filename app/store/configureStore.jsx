@@ -1,11 +1,15 @@
 import * as redux from 'redux';
 import thunk from 'redux-thunk';
 
-import {directionsReducer} from 'reducers';
+import {titleReducer, slidesReducer, currentSlideReducer,
+  currentPageReducer} from 'reducers';
 
 export var configure = (initialState = {}) => {
   var reducer = redux.combineReducers({
-    directions: directionsReducer
+    title: titleReducer,
+    slides: slidesReducer,
+    currentSlide: currentSlideReducer,
+    currentPage: currentPageReducer
   });
 
   var store = redux.createStore(reducer, initialState, redux.compose(

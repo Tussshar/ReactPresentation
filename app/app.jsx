@@ -30,6 +30,69 @@ require('style!css!sass!applicationStyles')
 
 store.dispatch(actions.changeDirection('Right', true));
 
+store.dispatch(actions.addTitle());
+
+var pages1 = [
+  {
+    pageNumber: '1',
+    heading: 'slide1SubHeading1',
+    points: ['point1', 'point2', 'point3']
+  },
+  {
+    pageNumber: '2',
+    heading: 'slide1SubHeading2',
+    points:['point1', 'point2', 'point3']
+  }
+];
+
+var pages2 = [
+  {
+    pageNumber: '1',
+    heading: 'slide2SubHeading1',
+    points: ['point1', 'point2', 'point3']
+  },
+  {
+    pageNumber: '2',
+    heading: 'slide2SubHeading2',
+    points:['point1', 'point2', 'point3']
+  }
+];
+
+var pages3 = [
+  {
+    pageNumber: '1',
+    heading: 'slide3SubHeading1',
+    points: ['point1', 'point2', 'point3']
+  },
+  {
+    pageNumber: '2',
+    heading: 'slide3SubHeading2',
+    points:['point1', 'point2', 'point3']
+  }
+];
+
+store.dispatch(actions.addSlide('ReactSlide 1', false, true, pages1));
+store.dispatch(actions.addSlide('ReactSlide 2', true, true, pages2));
+store.dispatch(actions.addSlide('ReactSlide 3', true, false, pages3));
+
+var state = store.getState();
+/*
+console.log(state.currentPage);
+console.log(state.currentPage.heading);
+
+if(state.currentPage.heading === undefined) {
+  console.log("true");
+}else {
+  console.log("False");
+}
+*/
+
+var currentSlide = state.slides[0];
+var currentPage = currentSlide.pages[0];
+
+store.dispatch(actions.updateSlide(currentSlide));
+store.dispatch(actions.updateCurrentPage(currentPage));
+
 $(document).foundation();
 
 ReactDOM.render(
@@ -43,6 +106,7 @@ ReactDOM.render(
     So now TodoApp component as well as all of its children will have access
     to data on store as well as dispaych action
   */
+
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/">
