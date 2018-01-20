@@ -1,5 +1,6 @@
 var React = require('react');
 var {connect} = require('react-redux');
+var actions = require('actions');
 
 export var Directions = React.createClass({
   render: function () {
@@ -7,16 +8,21 @@ export var Directions = React.createClass({
     var handleClick = (key, e) => {
 
       console.log("clicked: " + key);
-      var {slides, currentSlide, currentPage} = this.props;
+      var {slides, currentSlide, currentPage, dispatch} = this.props;
 
       if(key === "left"){
         currentSlide = slides[currentSlide.slideId - 2];
         currentPage = {};
 
+        dispatch(actions.updateSlide(currentSlide));
+        dispatch(actions.updateCurrentPage(currentPage));
 
       } else if(key === "right") {
         currentSlide = slides[currentSlide.slideId];
         currentPage = {};
+
+        dispatch(actions.updateSlide(currentSlide));
+        dispatch(actions.updateCurrentPage(currentPage));
 
       } else if(key === "top") {
         if(currentPage.pageNumber === currentSlide.pages[0].pageNumber) {
@@ -25,12 +31,15 @@ export var Directions = React.createClass({
           currentPage = currentSlide.pages[currentPage.pageNumber  -2];
         }
 
+        dispatch(actions.updateCurrentPage(currentPage));
+
       }else {
         if(currentPage.pageNumber === undefined) {
           currentPage = currentSlide.pages[0];
         } else {
           currentPage = currentSlide.pages[currentPage.pageNumber];
         }
+        dispatch(actions.updateCurrentPage(currentPage));
       }
     };
 
@@ -40,7 +49,7 @@ export var Directions = React.createClass({
       let buffer = [];
 
       if(currentPage.heading !== undefined) {
-        buffer.push(<li className="arrow top" key="topArrow" onClick={() => handleClick("left")}></li>);
+        buffer.push(<li className="arrow top" key="topArrow" onClick={() => handleClick("top")}></li>);
       }
 
       if(currentSlide.slideId !== slides[0].slideId) {

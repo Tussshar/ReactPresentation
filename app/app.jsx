@@ -88,7 +88,7 @@ if(state.currentPage.heading === undefined) {
 */
 
 var currentSlide = state.slides[0];
-var currentPage = currentSlide.pages[0];
+var currentPage = {};
 
 store.dispatch(actions.updateSlide(currentSlide));
 store.dispatch(actions.updateCurrentPage(currentPage));
