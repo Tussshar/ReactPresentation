@@ -14,15 +14,10 @@ export var Presentation = React.createClass({
 
     var {title} = this.props;
 
-    var renderState = () => {
-        console.log(title);
-    };
-
     return (
       <div className="row">
         <div className="column small-centered small-11 medium-10 large-10">
           <div className="container">
-            {renderState()}
             <Title/>
             <Points/>
             <Directions/>

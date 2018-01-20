@@ -3,14 +3,14 @@ var {connect} = require('react-redux');
 
 export var Points = React.createClass({
   render: function () {
-
+    
     var renderPoints = () => {
       var {currentPage} = this.props;
       let buffer = [];
 
       if(currentPage !== undefined) {
         currentPage.points.map(function(data){
-          buffer.push(<p>{data}</p>);
+          buffer.push(<p key={data.id}>{data.value}</p>);
         });
       }
 

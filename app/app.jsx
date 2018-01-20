@@ -36,12 +36,12 @@ var pages1 = [
   {
     pageNumber: '1',
     heading: 'slide1SubHeading1',
-    points: ['point1', 'point2', 'point3']
+    points: [{id:'point1', value:'point1'}, {id:'point2', value:'point2'}, {id:'point3', value:'point3'}]
   },
   {
     pageNumber: '2',
     heading: 'slide1SubHeading2',
-    points:['point1', 'point2', 'point3']
+    points:[{id:'point1', value:'point1'}, {id:'point2', value:'point2'}, {id:'point3', value:'point3'}]
   }
 ];
 
@@ -49,12 +49,12 @@ var pages2 = [
   {
     pageNumber: '1',
     heading: 'slide2SubHeading1',
-    points: ['point1', 'point2', 'point3']
+    points: [{id:'point1', value:'point1'}, {id:'point2', value:'point2'}, {id:'point3', value:'point3'}]
   },
   {
     pageNumber: '2',
     heading: 'slide2SubHeading2',
-    points:['point1', 'point2', 'point3']
+    points:[{id:'point1', value:'point1'}, {id:'point2', value:'point2'}, {id:'point3', value:'point3'}]
   }
 ];
 
@@ -62,12 +62,12 @@ var pages3 = [
   {
     pageNumber: '1',
     heading: 'slide3SubHeading1',
-    points: ['point1', 'point2', 'point3']
+    points: [{id:'point1', value:'point1'}, {id:'point2', value:'point2'}, {id:'point3', value:'point3'}]
   },
   {
     pageNumber: '2',
     heading: 'slide3SubHeading2',
-    points:['point1', 'point2', 'point3']
+    points:[{id:'point1', value:'point1'}, {id:'point2', value:'point2'}, {id:'point3', value:'point3'}]
   }
 ];
 
