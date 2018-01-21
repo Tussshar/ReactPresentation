@@ -13,12 +13,10 @@ export var addTitle = () => {
   }
 };
 
-export var addSlide = (heading, hasLeft, hasRight, pages) => {
+export var addSlide = (heading, pages) => {
   return {
     type: 'ADD_SLIDE',
     heading,
-    hasLeft,
-    hasRight,
     pages
   }
 };

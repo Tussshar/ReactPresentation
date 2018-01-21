@@ -7,7 +7,6 @@ export var Directions = React.createClass({
 
     var handleClick = (key, e) => {
 
-      console.log("clicked: " + key);
       var {slides, currentSlide, currentPage, dispatch} = this.props;
 
       if(key === "left"){
@@ -48,12 +47,13 @@ export var Directions = React.createClass({
       var {slides, currentSlide, currentPage} = this.props;
       let buffer = [];
 
+
+
       if(currentPage.heading !== undefined) {
         buffer.push(<li className="arrow top" key="topArrow" onClick={() => handleClick("top")}></li>);
       }
 
       if(currentSlide.slideId !== slides[0].slideId) {
-        console.log("True")
         buffer.push(<li className="arrow left" key="leftArrow" onClick={() => handleClick("left")}></li>);
       }
 
