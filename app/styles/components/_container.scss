@@ -41,9 +41,9 @@
   margin-top: 0.1rem;
 }
 
-.arrow:hover {
+/*.arrow:hover {
   width: 1.3em;
-}
+}*/
 
 .directions .left {
   display: inline-block;
@@ -65,12 +65,18 @@
   margin-left: 1.5rem;
 }
 
-.directions .down:hover {
+/*.directions .down:hover {
   margin-left: 1.6rem;
 }
 
 .directions .top:hover {
   margin-left: 1.6rem;
+}*/
+
+.directions {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 body {

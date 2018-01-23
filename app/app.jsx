@@ -141,8 +141,7 @@ var pages5 = [
       {id:'point1', value:'No events (other than vanilla DOM events)'},
       {id:'point2', value:'No AJAX capabilities whatsoever'},
       {id:'point4', value:'No data/ models'},
-      {id:'point5', value:'No promises'},
-      {id:'point6', value:'No framework'}
+      {id:'point5', value:'No framework'}
     ]
   },
   {
@@ -246,6 +245,56 @@ var pages10 = [
 ];
 
 store.dispatch(actions.addSlide('State', pages10));
+
+var pages11 = [
+  {
+  }
+];
+store.dispatch(actions.addSlide('Examples', pages11));
+
+var page12 = [
+  {
+    pageNumber: '1',
+    heading: 'A Simple Component',
+    points: [
+      {id: 'point1', value: 'See some live examples'}
+    ]
+  }
+];
+store.dispatch(actions.addSlide('A Simple Component', page12));
+
+var page13 = [
+  {
+    pageNumber: '1',
+    heading: 'A Nested Component',
+    points: [
+      {id: 'point1', value: 'See some live examples'}
+    ]
+  }
+];
+store.dispatch(actions.addSlide('A Nested Component', page13));
+
+var page14 = [
+  {
+    pageNumber: '1',
+    heading: 'A Stateless Component',
+    points: [
+      {id: 'point1', value: 'See some live examples'}
+    ]
+  }
+];
+store.dispatch(actions.addSlide('A Stateless Component', page14));
+
+var page15 = [
+  {
+    pageNumber: '1',
+    heading: 'A Stateful Component',
+    points: [
+      {id: 'point1', value: 'See some live examples'}
+    ]
+  }
+];
+store.dispatch(actions.addSlide('A Stateful Component', page15));
 
 var pages7 = [
   {
