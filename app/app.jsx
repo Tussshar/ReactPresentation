@@ -28,6 +28,7 @@ import Presentation from 'Presentation';
 //App css
 require('style!css!sass!applicationStyles')
 
+store.dispatch(actions.addTitle());
 var pages1 = [
   {
   }
@@ -51,6 +52,13 @@ store.dispatch(actions.addSlide('What is ReactJS', pages2));
 var pages3 = [
   {
     pageNumber: '1',
+    heading: 'It\'s all Magic',
+    points: [
+      {id:'iframe', value:'<iframe src="https://giphy.com/embed/12F9XtxH3uVXWg" width="480"' +
+        'height="254" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>'}
+    ]
+  },{
+    pageNumber: '2',
     heading: 'Virtual DOM',
     points: [
       {id:'point1', value:'Javascript(JSON) object that is a representation of the browser DOM'},
@@ -61,13 +69,13 @@ var pages3 = [
     ]
   },
   {
-    pageNumber: '2',
+    pageNumber: '3',
     heading: 'Diffing Algorithm',
 
     points:[{id: 'point1', value: 'Uses 2 virtual trees (new and previous) to find differences and batch update real DOM'}]
   },
   {
-    pageNumber: '3',
+    pageNumber: '4',
     heading: 'Browser DOM update',
     points: [
       {id:'point1', value:'React creates the new virtual DOM, diffs it with the '+
@@ -120,13 +128,6 @@ var pages4 = [
     heading: 'React dev tools',
     points: [
       {id:'point1', value:'React Chrome extension makes debugging  so much easier'}
-    ]
-  },
-  {
-    pageNumber: '6',
-    heading: 'Server-side rendering',
-    points: [
-      {id:'point1', value:'you can render React on the server-side'}
     ]
   }
 ];
@@ -296,16 +297,23 @@ var page15 = [
 ];
 store.dispatch(actions.addSlide('A Stateful Component', page15));
 
-var pages7 = [
+var page16 = [
   {
     pageNumber: '1',
-    heading: 'What is React.js',
+    heading: 'Who uses React?',
     points: [
-      {id:'point1', value:'It was developed by Facebook'},
-      {id:'point2', value:'Its is a view in MVC'},
-      {id:'point3', value:'It is a javascript library'}]
+      {id:'point1', value:'Facebook'},
+      {id:'point2', value:'Teradek'},
+      {id:'point3', value:'Instagram'},
+      {id:'point4', value:'Netflix'},
+      {id:'point5', value:'Airbnb'},
+      {id:'point6', value:'Reddit'}
+    ]
   }
 ];
+
+store.dispatch(actions.addSlide('Who uses React?', page16));
+
 var state = store.getState();
 /*
 console.log(state.currentPage);
