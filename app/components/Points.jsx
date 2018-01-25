@@ -1,7 +1,5 @@
 var React = require('react');
 var {connect} = require('react-redux');
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import AnimateOnChange from 'react-animate-on-change';
 
 export var Points = React.createClass({
   render: function () {
