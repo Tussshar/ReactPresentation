@@ -24,7 +24,7 @@ export var Points = React.createClass({
       currentPage.pageNumber == 1) {
         return (
           <div>
-            <iframe src="https://giphy.com/embed/12F9XtxH3uVXWg" width="480"
+            <iframe src="https://giphy.com/embed/12F9XtxH3uVXWg" alt="#WaitForIt" width="480"
               height="254" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
           </div>);
       }
